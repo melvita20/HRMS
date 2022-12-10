@@ -33,7 +33,7 @@ public static final String INSERT_NEW_USER= "insert into user (roleid,username,p
 	public static final String INSERT_EMP_ADDRESS_QUERY="insert into employee_address(employee_id,house_address_line1,house_address_line2,street,city,state,zip) values(?,?,?,?,?,?,?)";
 	public static final String SQL_SELECT__ALL_EMPLOYEE = "select * from employee emp join employee_address ea on emp.employee_id=ea.employee_id where emp.EMP_STATUS=?";
 	public static final String SQL_DELETE_EMPLOYEE= "update employee  set emp_status=? where employee_id = ? and emp_status !=?";
-	public static final String UPDATE_EMPLOYEE_QUERY="update employee set first_name=?, middle_name=?,last_name=?, gender=?,email=?,dob=?,designation=?,role_id=?,phone_number=?,department_id=?,work_location=?,hire_date=?,modified_on=? where employee_id=? and employee_id not in (select employee_id from salary)";
+	public static final String UPDATE_EMPLOYEE_QUERY="update employee set first_name=?, middle_name=?,last_name=?, gender=?,email=?,dob=?,designation=?,role_id=?,phone_number=?,department_id=?,work_location=?,hire_date=?,modified_on=? where employee_id=? ";
 	public static final String UPDATE_EMP_ADDRESS="update employee_address set house_address_line1=?,house_address_line2=?,street=?,city=?,state=?,zip=? where employee_id=?";
 	public static final String FIND_EMPLOYEE	= "select * from employee where employee_id=? and emp_status=?";
 	public static final String FETCH_EMPLOYEE_DETAIL	= "select * from employee e join employee_address ea on e.employee_id=ea.employee_id and e.employee_id=? and e.emp_status=?";
